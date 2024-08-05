@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .parents {
+
+            width: 50%;
+            height: 700px;
+            background-color: blue;
+            position: relative;
+        }
+
+        .container {
+            width: 300px;
+            height: 300px;
+            background-color: green;
+
+            /* position: relative;
+    /* top */
+            /*  right:50px */
+
+            position: absolute;
+            right: 0;
+            bottom: 0;
+
+        }
+
+
+        .sticky {
+            width: 100%;
+            height: 50px;
+            background-color: blueviolet;
+            position: sticky;
+            top: 0;
+        }
+
+        .scroll {
+            width: 50%;
+            height: 1500px;
+            background-color: chocolate;
+        }
+
+        .fixed{
+            width: 400px;
+            height:300px;
+            background-color :bisque ;
+            position: fixed;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="parents">
+        <div class="container">
+        </div>
+           
+           
+        <div class="fixed"></div>
+    </div>
+
+    
+
+    <div class="sticky">
+    </div>
+
+    <div class="scroll"></div>
+
+
+</body>
+
+</html>
