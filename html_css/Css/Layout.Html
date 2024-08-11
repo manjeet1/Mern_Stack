@@ -6,94 +6,175 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout</title>
 
-<style>
-*{
-    margin: 0;
-}
+    <style>
+        * {
+            margin: 0;
+        }
 
-.header >ul{
-width: 100%;
-height: 100px;
-background-color:rgb(111,111, 154);
-/* align-content: center; */
+        .header>ul {
+            width: 100%;
+            height: 100px;
+            background-color: rgb(111, 111, 154);
+            /* align-content: center; */
 
-}
+        }
 
-li:hover{
-    color: red;
-    cursor: pointer;
-    border-bottom: 1px solid orangered;
-}
+        li:hover {
+            color: red;
+            cursor: pointer;
+            border-bottom: 1px solid orangered;
+        }
 
-.main{
-    width: 100%;
-    height: 750px;
-    display: flex;
-    background-color: rgb(17, 20, 10);
-}
+        .main {
+            width: 100%;
+            height: 750px;
+            display: flex;
+            background-color: rgb(17, 20, 10);
+        }
 
-.left{
-    width: 25%;
-    background-color: blueviolet;
-}
+        .left {
+            width: 25%;
+            background-color: blueviolet;
+        }
 
-.right
-{
-    width:75%;
-    background-color: aquamarine;
-}
+        .right {
+            width: 75%;
+            background-color: aquamarine;
+        }
 
-.right-top{
-    width: 100%;
-    height: 300px;
-    background-color: chocolate;
-}
+        .right-top {
+            width: 100%;
+            height: 300px;
+            background-color: chocolate;
+        }
 
-.right-bottom{
-    display: flex;
-    width:100%;
-    height: 450px;
-    background-color: darkgoldenrod;
-}
+        .right-bottom {
+            display: flex;
+            width: 100%;
+            height: 450px;
+            background-color: darkgoldenrod;
+        }
 
-.right-bottom-left{
-    width: 50%;
-    height: 450px;
-    background-color: ghostwhite;
-}
+        .right-bottom-left {
+            width: 50%;
+            height: 450px;
+            background-color: ghostwhite;
+        }
 
-.right-bottom-right{
-    width: 50%;
-    height: 450px;
-    background-color: beige;
-}
+        .right-bottom-right {
+            width: 50%;
+            height: 450px;
+            background-color: beige;
+        }
 
-.footer{
-width: 100%;
-height: 100px;
-background-color:rgb(111,111, 154);
-}
+        .footer {
+            width: 100%;
+            height: 100px;
+            background-color: rgb(111, 111, 154);
+        }
 
-ul{
+        ul {
 
-    top: 10PX;
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
-    padding-top: 40px;
-}
+            top: 10PX;
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 40px;
+        }
 
-.Category{
-display: none;
+        .Category {
+            display: none;
 
-}
+        }
 
-.page li:hover .Category{ 
-    display: block;
-}
+        .page li:hover .Category {
+            display: block;
+        }
 
-</style>
+        select {
+            display: none;
+        }
 
+        @media screen and (max-width:600px) {
+            .header {
+                display: none;
+            }
+
+            select {
+                display: block;
+                width: 100%;
+                height: 50px;
+                text-align: center;
+                background-color: green;
+            }
+
+            .main {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .left {
+                width: 100%;
+                height: 300px;
+            }
+
+            .right {
+                width: 100%;
+            }
+
+            .right-bottom {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .right-bottom-left,
+            .right-bottom-right {
+                width: 100%;
+            }
+        }
+
+
+        @media screen and (min-width:600px) and (max-width:900px) {
+            .header {
+                display: none;
+            }
+
+            .main {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .right {
+                display: flex;
+                width: 100%;
+
+            }
+
+            .right-top {
+                width: 100%;
+                height: 100%;
+            }
+
+            .left {
+                width: 100%;
+                height: 300px;
+            }
+
+            .right-bottom {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .right-bottom-left,
+            .right-bottom-right {
+                width: 100%;
+                flex-direction: column;
+            }
+
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 
 
@@ -102,7 +183,25 @@ display: none;
 
 <body>
 
-    <div class="header"> 
+    <i class="bi bi-list"></i>
+
+    <!-- <select name="" id="">
+
+        <option>Product</option>
+        <option>Computers</option>
+        <option>smartphone</option>
+        <option>Camera</option>
+        <option>Fitness</option>
+        <option>Gallery</option>
+        <option>Home</option>
+        <option>Aboutus</option>
+        <option>Contact</option>
+
+    </select> -->
+
+
+
+    <div class="header">
         <ul class="page">
             <li>Home</li>
             <li>Product</li>
@@ -115,7 +214,7 @@ display: none;
             <li>Gallery</li>
             <li>Aboutus</li>
             <li>Contact</li>
-            </ul>    
+        </ul>
     </div>
     <div class="main">
 

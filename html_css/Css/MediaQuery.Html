@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<Style>
+
+*{
+    margin: 0;
+}
+
+.container{
+    width: 50%;
+    height: 300px;
+    background-color: rgb(37, 119, 5);
+
+}
+
+/*  600 px */
+/*  600-900 px   */
+
+@media screen and (max-width:600px){
+    .container{ 
+        width: 100%;
+        height: 50px;
+        background-color: orange;
+    }
+}
+
+@media screen and (min-width:600px)  and (max-width:900px){
+.container{
+    width: 25%;
+    height: 500px;
+    background-color: darkseagreen;
+}
+}
+
+
+</Style>
+
+
+</head>
+<body>
+    
+<div class="container"></div>
+
+
+</body>
+</html>
