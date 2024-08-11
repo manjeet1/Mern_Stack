@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Here</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        form {
+            width: 50%;
+            margin: auto;
+            background-color: whitesmoke;
+            margin-bottom: 50px;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+
+        label {
+            width: 25%;
+            display: inline-block;
+        }
+
+        input,
+        select,
+        textarea,
+        .custom-div {
+            /* background-color: red; */
+            width: 70%;
+            margin-top: 10px;
+            /* height: 40px; */
+            padding: 10px;
+        }
+
+        input[type="file"] {
+            border: 1px solid black;
+        }
+
+        /* 
+        .custom-gender {
+            display: inline;
+        } */
+        /* 
+        input[type="radio"] {
+            display: inline;
+        } */
+        .custom-div {
+            display: inline-flex;
+        }
+
+        input[type="reset"],
+        input[type="submit"] {
+            width: 100px;
+            border-radius: 10px;
+        }
+
+        .btn-center {
+            text-align: center;
+        }
+        p{
+            margin-top: 10px;
+        }
+        a{
+            text-decoration: none;
+        }
+        input[type="reset"]:hover,
+        input[type="submit"]:hover {
+            cursor: pointer;
+            background-color: green;
+        }
+
+    </style>
+
+
+
+
+</head>
+
+<body>
+
+        <h1>User information  </h1>
+
+
+
+
+    <form action="" method="" target="_blank">
+
+        <label for="">Username</label> <input type="text">
+
+        <label for="">Password</label><input type="password">
+
+        <label for="">Email</label><input type="email">
+
+        <label for="">Dob</label><input type="date">
+
+        <label for="">Phone</label><input type="text">
+
+        <label for="">Profile</label><input type="file">
+
+        <label for="">Search</label><input type="search">
+       
+        <label for="">Gender</label>
+        <span class="custom-div">
+            <input name="Male" type="radio"> <label for="">Male</label>
+            <input name="FeMale" type="radio"> <label for="">Female</label>
+            <input name="others" type="radio"> <label for="">Others</label>
+        </span>
+
+            <label for="">Skills</label>
+            <div class="custom-div">
+            <input name="Hardware" type="checkbox"><label for="">Hardware</label>
+            <input name="DataEntry" type="checkbox"><label for="">DataEntry</label>
+            <input name="DataValidation" type="checkbox"><label for="">DataValidation</label>
+
+            </div>
+
+                    <label for="">Country</label>
+
+                    <select name="" id="">
+                        <option value="">choose your country</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Nepal">Nepal</option>
+                        <option value="India">India</option>
+                        <option value="China">China</option>
+                        <option value="Usa">Usa</option>
+                    </select>
+
+                    <label for="">Discription</label>
+                    <textarea rows="10" cols="50"></textarea>
+
+                    <div class="btn-center">
+                    <input type="reset">
+                    <input type="submit" value="Register">
+                    <p> Already have an Account ?<a href="login.html"> Login</a> </p>
+                    </div>
+    </form>
+
+
+</body>
+
+</html>

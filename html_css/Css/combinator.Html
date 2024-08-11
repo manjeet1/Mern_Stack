@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+h1,p,.demo
+{
+    color: blueviolet;
+}
+
+.container div{ background-color: rgb(176, 211, 162);}
+
+.parent>div {
+    color: bisque;
+}
+
+.parent>.grad-child {
+    color: blue;
+}
+.grad-child1 ~ div
+{
+background-color: orange;
+}
+
+.grad-child1 + div
+{
+background-color: rgb(25, 97, 47);
+}
+
+
+</style>
+
+</head>
+<body>
+
+    <div class="parent">
+        <div class="child">Child 1</div>
+<span><div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere necessitatibus debitis voluptatibus hic sequi obcaecati cupiditate, magni illum. Beatae distinctio laudantium eaque facilis harum iure repudiandae explicabo eum adipisci voluptate.</div></span>
+        <div class="child">Child 2</div>
+        <div class="child">Child 3
+            <div class="grad-child1">Grad-child 1</div>
+            <div class="grad-child2">Grand-child 2</div>
+            <div class="grad-child3">Grand-child 3</div>
+
+        </div>
+    </div>
+    
+    <div class="container"> 
+
+        <div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur magni exercitationem nulla, ducimus, amet rerum obcaecati quod tempore dignissimos tempora quidem a voluptates accusamus veniam eum alias voluptatem! Odit, perferendis.</div>
+        
+    </div>
+
+    <h1>Combinator </h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos suscipit, molestias ratione atque culpa unde laborum modi voluptatibus quidem, velit ullam? Facilis quasi quas odio incidunt, in eveniet nulla voluptatibus.</p>
+    <div class="demo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ea iure nesciunt eligendi quis quisquam. Impedit, ipsa dignissimos ad quidem ullam quo quibusdam! Laboriosam molestiae deleniti libero eius esse veritatis!</div>
+
+
+</body>
+</html>
