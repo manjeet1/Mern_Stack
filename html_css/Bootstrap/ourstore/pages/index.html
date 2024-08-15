@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+
+  <!-- bootstrap css cdn link-->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- bootstrap icon cdn link-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    .img-hover:hover {
+      transform: scale(2);
+      transition: 4s;
+      cursor: pointer;
+    }
+.custom-img{
+  overflow: hidden;
+}
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- navbar start-->
+  <div class="row text-bg-info p-2">
+    <div class="col-md-3 text-center"> <a class="navbar-brand fs-2" href="#">OurStore</a></div>
+
+    <div class="col-md-6">
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-warning" type="submit">Search</button>
+      </form>
+
+
+    </div>
+
+    <div class="col-md-3 fs-4 d-flex justify-content-evenly">
+      <a href="signin.html" class="text-dark"> <i class="bi bi-box-arrow-in-right"> </i></a>
+      <a href="register.html" class="text-dark"> <i class="bi bi-person-add"></i></a>
+      <a href="cart.html" class="text-dark"></1> <i class="bi bi-cart"></i></a>
+    </div>
+  </div>
+
+
+  <nav class="navbar navbar-expand-lg bg-secondary">
+    <div class="container-fluid ">
+
+      <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- w =0,25,50,75,100-->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 active w-100 d-flex justify-content-evenly">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="product.html">Product</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="blog.html">Blogs</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="contact.html">Contact</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="about.html">About</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--  navbar end -->
+
+
+  <!-- image slider start-->
+  <div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src="https://img.lazcdn.com/us/domino/6eaba7b5-2f33-49c6-b6d6-dd9189a71caf_NP-1976-688.jpg_1200x1200q80.jpg_.webp"
+          class="d-block w-75 m-auto" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://img.lazcdn.com/us/domino/591fb54192a6e0e151c106c5838ebf9f.jpg_1200x1200q80.jpg_.webp"
+          class="d-block w-75 m-auto" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://img.lazcdn.com/us/domino/3f0779d6-84f7-4d21-a406-ac2ab6119410_NP-1976-688.png_1200x1200q80.png_.webp"
+          class="d-block w-75  m-auto" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- image slider End  -->
+
+  <!-- product demo start -->
+  <div class="container">
+    <h2 class="text-decoration-underline text-muted">Most Popular</h2>
+    <div class="row row-cols-2 row-cols-md-4 g-4">
+      <div class="col">
+        <div class="card shadow-lg">
+          <div class="custom-img">          
+            <img
+            src="https://www.jiomart.com/images/product/original/493838612/noise-noisefit-diva-smartwatch-silver-link-digital-o493838612-p603876101-5-202308141706.jpeg?im=Resize=(420,420)"
+            height="300px" class="card-img-top img-hover" alt="...">
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">Smart Watch</h5>
+            <h6>Rs. 5000</h6>
+            <p class="card-text text-truncate">This is a longer card with supporting text below as a natural lead-in to
+              additional content. This content is a little bit longer.</p>
+            <div class="rating text-center mb-2 text-warning">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+              <i class="bi bi-star"></i>
+            </div>
+            <div class="text-center">
+              <button class="btn btn-warning btn-sm">Add to cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card shadow-lg">
+          <div class="custom-img">          
+            <img
+            src="https://rukminim2.flixcart.com/image/612/612/xif0q/smartwatch/3/m/z/-original-imagyxxfutvgy8gm.jpeg?q=70"
+            height="300px" class="card-img-top img-hover" alt="...">
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">Smart Watch</h5>
+            <h6>Rs. 5000</h6>
+            <p class="card-text text-truncate">This is a longer card with supporting text below as a natural lead-in to
+              additional content. This content is a little bit longer.</p>
+            <div class="rating text-center mb-2 text-warning">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star"></i>
+            </div>
+            <div class="text-center">
+              <button class="btn btn-warning btn-sm">Add to cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card shadow-lg">
+          <div class="custom-img">          
+            <img
+            src="https://worldlink.com.np/wp-content/uploads/2024/01/HP_Nepal-copy1-1024x1024.png"
+            height="300px" class="card-img-top img-hover" alt="...">
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">Smart Watch</h5>
+            <h6>Rs. 5000</h6>
+            <p class="card-text text-truncate">This is a longer card with supporting text below as a natural lead-in to
+              additional content. This content is a little bit longer.</p>
+            <div class="rating text-center mb-2 text-warning">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+              <i class="bi bi-star"></i>
+            </div>
+            <div class="text-center">
+              <button class="btn btn-warning btn-sm">Add to cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card shadow-lg">
+          <div class="custom-img">          
+            <img
+            src="https://rukminim2.flixcart.com/image/850/1000/xif0q/smartwatch/e/l/l/-original-imagsqcrznhyjsqr.jpeg?q=20&crop=false"
+            height="300px" class="card-img-top img-hover" alt="...">
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">Smart Watch</h5>
+            <h6>Rs. 5000</h6>
+            <p class="card-text text-truncate">This is a longer card with supporting text below as a natural lead-in to
+              additional content. This content is a little bit longer.</p>
+            <div class="rating text-center mb-2 text-warning">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <div class="text-center">
+              <button class="btn btn-warning btn-sm">Add to cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- product demo end-->
+
+
+    <div class="container">
+      <footer class="py-5">
+        <div class="row">
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-5 offset-md-1 mb-3">
+            <form>
+              <h5>Subscribe to our newsletter</h5>
+              <p>Monthly digest of what's new and exciting from us.</p>
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden">Email address</label>
+                <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                <button class="btn btn-primary" type="button">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+          <p>&copy; 2024 Company, Inc. All rights reserved.</p>
+          <ul class="list-unstyled">
+            <a href="https://www.facebook.com/" class="text-dark"> <i class="bi bi-facebook me-2"></i></a>
+            <a href="https://www.instagram.com/" class="text-dark"> <i class="bi bi-instagram me-2"></i></a>
+            <a href="https://x.com/" class="text-dark"> <i class="bi bi-twitter me-2"></i></a>
+
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+
+    <!-- bootstrap js cdn link -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>
