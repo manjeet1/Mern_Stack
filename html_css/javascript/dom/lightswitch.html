@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+<IMG SRC="https://cdn.vectorstock.com/i/2000v/70/44/3d-realistic-off-light-bulb-icon-closeup-vector-27407044.avif" width="200" height="200" ID="on-off">
+
+    <button onclick="lightoff()" id="light-on-off">On</button>
+<br><br>
+
+<input type="password" id="form-type">
+<span onclick="showhide()" class="fas fa-eye" id="status">show</span>
+
+
+
+    
+</body>
+
+<script>
+
+function showhide(){
+
+    if(document.getElementById("status").innerHTML=="show"){
+
+        document.getElementById("form-type").type="text"
+        document.getElementById("status").innerHTML="hide"
+
+    }
+
+    else
+    {
+
+        document.getElementById("form-type").type="password"
+        document.getElementById("status").innerHTML="show"
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+function lightoff(){
+
+var light=document.getElementById("light-on-off").innerHTML
+if(light=='on'){
+
+    document.getElementById("on-off").src="https://cdn.vectorstock.com/i/2000v/70/44/3d-realistic-off-light-bulb-icon-closeup-vector-27407044.avif"
+    document.getElementById("light-on-off").innerHTML="off"
+}
+
+else
+{
+document.getElementById("on-off").src="https://cdn.vectorstock.com/i/2000v/00/13/yellow-light-bulb-over-black-background-vector-2120013.avif"
+    document.getElementById("light-on-off").innerHTML="on"
+
+}
+
+
+}
+
+
+</script>
+
+
+</html>

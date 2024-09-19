@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <h1 class="random"> Document Object Model</h1>
+    <h1 class="random"> Document Object Model</h1>
+   
+    <img src=""" alt="" id="img1">
+
+<script>
+
+/*
+dom = document object model
+
+
+
+
+*/
+console.log(document);
+
+// document.querySelector('h1').innerHTML="hi";
+
+var body=document.body;
+
+
+var img11=document.createElement("img");
+img11.src="https://www.bhagwanbhajan.com/shree-ganesh/shree-ganesh-hd-wallpapers/ganesh-chaturthi-hd-wallpaper-2020.jpg"
+img11.width=200;
+img11.height=200;
+
+body.append(img11);
+
+document.querySelector("img").src="https://media.istockphoto.com/id/2148549144/photo/lord-ganesh-s-divine-presence-on-ganesh-chaturthi.jpg?s=2048x2048&w=is&k=20&c=x_-3Ir844kYRN6TUR3FKmT4cLlXu4tAuEm9NHAG_U9g="
+document.querySelector("img").height=200;
+document.querySelector("img").width=200;
+
+
+var heading_first=document.createElement("h1");
+body.append(heading_first);
+heading_first.setAttribute("id",'test');
+heading_first.id='hello';
+
+heading_first.removeAttribute("id");
+
+document.querySelector('h1').textContent="Good morning !!!";
+// document.querySelector("#hello").textContent="Hello from ID";
+// document.getElementById("hello").textContent='random text';
+
+var selectclass= document.getElementsByClassName('random')[0]
+//console.log(selectclass);
+
+selectclass.textContent='lorem ipsum dolor site'
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

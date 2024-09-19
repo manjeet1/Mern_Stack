@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="" onsubmit="return validateForm()">
+
+        <lable for="username">username</lable>
+        <input type="text" name="" id="username" onkeyup="usernameValidation()">
+
+        <span id="username_error"></span>
+
+
+        <br><br>
+
+        <lable for="password">password</lable>
+        <input type="text" name="" id="password" onkeyup="passwordValidation()">
+
+        <span id="password_error"></span>
+
+        <br><br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+
+    <script>
+
+
+        function validateForm() {
+
+            if (usernameValidation() && passwordValidation()) {
+                return true;
+
+            }
+            else {
+
+                return false;
+            }
+        }
+
+        function usernameValidation() {
+
+            var username = document.getElementById("username").value;
+
+            if (username === "") {
+
+                document.getElementById("username_error").innerHTML = "Requirdd field"
+                document.getElementById("username_error").style.color = 'red';
+                return false;
+
+
+            }
+
+            else if (username.match(/[0-9]+/)) {
+
+                document.getElementById("username_error").innerHTML = "username must not containt number "
+                document.getElementById("username_error").style.color = 'red';
+                return false;
+
+            }
+
+            else if (username.match(/[!@#$%^&*]+/)) {
+
+                document.getElementById("username_error").innerHTML = "username must not containt special charactor "
+                document.getElementById("username_error").style.color = 'red';
+                return false;
+
+            }
+
+
+
+            else if (username.length < 4) {
+
+                displayMsg("username_error", 'red', "username must not containt 4 charactor");
+                return false;
+
+
+                // document.getElementById("username_error").innerHTML = "username must not containt 4 charactor "
+                // document.getElementById("username_error").style.color = 'red';
+
+            }
+
+
+
+            else {
+
+                displayMsg("username_error", 'green', "valid username");
+                return true;
+
+                // document.getElementById("username_error").innerHTML = "valid username"
+                // document.getElementById("username_error").style.color = 'green';
+
+            }
+
+        }
+
+
+        function passwordValidation() {
+            var password = document.getElementById("password").value
+            if (password === "") {
+                displayMsg("password_error", "red", "required field")
+            }
+
+            else if (!password.match(/[a-z]+/)) {
+
+                displayMsg("password_error", "red", "password must contain at atleast one lower character")
+                return false;
+
+            }
+
+
+            else if (!password.match(/[A-Z]+/)) {
+
+                displayMsg("password_error", "red", "password must contain at atleast one upper character")
+                return false;
+
+            }
+
+
+            else if (!password.match(/[0-9]+/)) {
+
+                displayMsg("password_error", "red", "password must contain atleast one number")
+                return false;
+
+            }
+
+
+            else if (!password.match(/[!@#$%^&*()]+/)) {
+
+                displayMsg("password_error", "red", "password must contain atleast special character")
+                return false;
+
+            }
+
+            else if (password.length < 8) {
+
+                displayMsg("password_error", "red", "password must contain atleast weak password")
+                return false;
+
+            }
+
+            else if (password.length >= 0 && password.length <= 20) {
+
+                displayMsg("password_error", "green", "strong password")
+                return true;
+
+            }
+
+
+            else if (password.length > 20) {
+
+                displayMsg("password_error", "red", "password must contain maximun 15 character")
+                return false;
+
+            }
+
+
+            else {
+
+                displayMsg("password_error", "green", "valid password")
+                return true;
+
+
+            }
+
+        }
+
+
+        function displayMsg(id, color, msg) {
+
+            document.getElementById(id).innerHTML = msg;
+            document.getElementById(id).style.color = color;
+        }
+
+    </script>
+
+
+
+
+</body>
+
+</html>
