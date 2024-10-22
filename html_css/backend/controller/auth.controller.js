@@ -33,6 +33,55 @@ router.get('/login', function (req, res, next) {
 })
 
 
+
+// /auth/login
+router.post('/login', function (req, res, next) {
+    UserModel.findOne({
+        email: req.body.email
+    })
+        .then(function (user) {
+            if (!user) {
+                return next({
+                    msg: "Email Not Registered Yet",
+                    status: 404
+                })
+            }
+
+            if (user.isActivated) {
+                return next({
+                    msg: "Please Activate Your Acocunt/Contact System Administrator",
+                    status: 404
+                })
+            }
+
+            if (user) {
+                var isMatched = passwordHash.verify(req.body.password, user.password)
+                if (!isMatched) {
+                    return next({
+                        msg: "Invalid Password",
+                        status: 404
+                    })
+                }
+                if (isMatched) {
+                    res.json({
+                        LoggedInUser: user,
+                        msg: "Logged In Successfully",
+                        status: 200
+                    })
+                }
+            }
+        })
+        .catch(function (err) {
+            return next(err)
+        })
+})
+
+
+
+
+
+
+
 // authy/login
 
 router.post('/login', function (req, res, next) {
