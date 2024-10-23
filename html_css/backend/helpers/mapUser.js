@@ -1,4 +1,4 @@
-module.exports = function(user, reqData){
+module.exports = function (user, reqData) {
     if (reqData.username) {
         user.username = reqData.username
     }
@@ -19,6 +19,11 @@ module.exports = function(user, reqData){
     }
     if (reqData.permanent_address) {
         user.address.permanentAddress = reqData.permanent_address
+    }
+
+
+    if (reqData.img) {
+        user.image = reqData.img
     }
 
     return user
