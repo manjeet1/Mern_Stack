@@ -30,15 +30,70 @@ export class Register extends Component {
 
     handleChange = event => {
         const { name, value } = event.target;
+        // this.setState({
+        //     data: {
+        //         [name]: value
+        //     }
+        // }, ()=>{
+        //     console.log("this.state.data is: ", this.state.data)
+        // })
         this.setState(previousState => ({
             data: {
                 ...previousState.data,
                 [name]: value
             }
         }), () => {
-            console.log("state data is: ", this.state.data)
+            // console.log("state data is: ", this.state.data)
+            this.validateForm(name)
         })
     }
+
+
+    validateForm = fieldName => {
+        var errMsg = ""
+        switch (fieldName) {
+            case "username":
+                errMsg = this.state.data[fieldName]
+                    ? this.state.data[fieldName].match(/[a-z]/)
+                        ? this.state.data[fieldName].match(/[0-9]/)
+                            ? "username must not contain number"
+                            : this.state.data[fieldName].match(/^[!@#$%^#&*]/)
+                                ? "username must not contain number or special character"
+                        : ""
+                        
+                    : "username must start with alphabet"
+                : "Required field"
+        }
+
+        this.setState(previousErr => ({
+            error: {
+                ...previousErr.error,
+                [fieldName]: errMsg
+            }
+        }), () => {
+            console.log("error is: ", this.state.error)
+        })
+
+    }
+
+
+    handleSubmit = event => {
+        event.preventDefault()
+        this.setState({
+            isSubmitting: true
+        })
+
+        // data preparation
+        // api call
+        // send data to server
+
+        setTimeout(() => {
+            this.setState({
+                isSubmitting: false
+            })
+        }, 3000);
+    }
+
 
     render() {
         return (
@@ -47,6 +102,7 @@ export class Register extends Component {
                     <h1>Register</h1>
                     <label htmlFor="username">Username</label>
                     <input type="text" id="username" name="username" onChange={this.handleChange} className="form-control form-control-lg" />
+                    <p className="text-danger">{this.state.error.username}</p>
 
                     <label htmlFor="email">Email</label>
                     <input type="email" id="email" name="email" onChange={this.handleChange} className="form-control form-control-lg" />
@@ -76,7 +132,7 @@ export class Register extends Component {
                         <option value={"female"}>Female</option>
                         <option value={"others"}>Others</option>
                     </select>
-                    <button type="submit" value={"Register"} className="btn btn-primary mt-3" >Register</button>
+                    <button disabled={this.state.isSubmitting} type="submit" value={"Register"} className="btn btn-primary mt-3" >Register</button>
                 </form>
             </>
         )

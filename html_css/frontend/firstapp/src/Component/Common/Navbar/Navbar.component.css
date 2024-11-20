@@ -1,23 +1,23 @@
-*{
-
+* {
     margin: 0;
 }
 
-li{
+li {
     padding: 10px;
 }
 
-ul{
+ul {
     display: flex;
     justify-content: space-evenly;
-    list-style:none;
+    list-style: none;
     background-color: cornflowerblue;
-
 }
 
-
-li:hover{
-    cursor:pointer;
+li:hover {
+    cursor: pointer;
     color: red;
 }
-
+a{
+    text-decoration: none;
+    color: black;
+}
